@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<!--
+	ZeroFour by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Отслеживание</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+        <link rel="stylesheet" href="assets/css/style.min.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+	</head>
+    <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header Wrapper -->
+        <div id="header-wrapper">
+            <div class="container">
+
+                <!-- Header -->
+                <header id="header">
+                    <div class="inner">
+
+                        <!-- Logo -->
+                        <h1><a href="index.html" id="logo">Трек-скан</a></h1>
+
+                        <!-- Nav -->
+                        <nav id="nav">
+                            <ul>
+                                <li><a href="index.html">О нас</a></li>
+                                <li>
+                                    <a href="#">Услуги</a>
+                                    <ul>
+                                        <li><a href="#">Калькулятор</a></li>
+                                        <li><a href="#">Заключить договор</a></li>
+                                        <li>
+                                            <a href="#">Доставка</a>
+                                            <ul>
+                                                <li><a href="expressDelivery.html">Экспресс доставка</a></li>
+                                                <li><a href="#">Срочная доставка</a></li>
+                                                <li><a href="#">Вызов курьера</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="current_page_item"><a href="tracking.html">Отслеживание</a></li>
+                                <li><a href="feedback.html">Обратная связь</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </header>
+
+            </div>
+        </div>
+
+        <!-- Main Wrapper -->
+        <div id="main-wrapper">
+            <div class="wrapper style2">
+                <div class="inner">
+                    <div class="container">
+                        <div id="content">
+
+                            <!-- Content -->
+
+                            <article>
+                                <header class="major">
+                                    <h2>Отследить заказ</h2>
+                                    <p>Для согласования даты и времени доставки, изменении адреса или режима доставки необходимо ввести номер Вашего заказа (отправления) и нажать на кнопку «Назначить дату доставки» или «Изменить дату и адрес доставки»</p>
+                                </header>
+
+                                <div class="question-form track-form">
+                                    <form id="track-form" class="clearfix" method="get" counter="3">
+                                        <div class="span2"><span class="courier-note">Номер заказа</span></div>
+                                        <input type="text" name="order_id">
+                                        <a href="#" class="btn act" title="">Отследить</a>
+                                        <input type="hidden" name="PageID" value="58">
+                                        <input type="hidden" name="csrf" value="cbe6c518ad8196137ea1d63795d1b774">
+                                    </form>
+                                    <div id="track-error" class="track-response clearfix" style="display: none;"></div>
+                                    <p class="thanks" style="display:none;">Спасибо, что обратились в нашу компанию!</p>
+                                    <div id="track-result" style="display: block;">
+                                        <div id="track-information" class="track-information">
+                                            <div class="track-number">Накладная № 1812536</div>
+                                            <div class="track-date">Дата создания: 10.04.2011</div>
+                                            <div class="clear"></div>
+                                            <hr>
+                                            <div class="clear"></div>
+
+
+
+                                            <div class="track-tables">
+                                                <div class="track-table tracking-info ">
+                                                    <div class="track-table-header">
+                                                        Вручен
+                                                    </div>
+                                                    <div class="track-table-body">
+                                                        <div class="row-fluid">
+                                                            <div class="span6">
+                                                                <p><strong>Откуда:</strong><br>Тамбов</p>
+                                                            </div>
+                                                            <div class="span6">
+                                                                <p><strong>Куда:</strong><br>
+                                                                    Москва
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+
+                                                        <div class="clear"></div>
+                                                        <div class="track-current-status">Текущее состояние: Вручен: Галина Викторовна Нет, Москва, 15.04.2011</div>
+                                                        <div class="track-details-btn">Детали доставки <svg xmlns="http://www.w3.org/2000/svg" width="9.28" height="5.488" viewBox="0 0 9.28 5.488"></svg></div>
+                                                        <div class="track-details-content" style="display: block;">
+                                                            <div class="track-table-body-head">Отслеживание</div>
+                                                            <table>
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>Статус</th>
+                                                                    <th>Местоположение</th>
+                                                                    <th>Дата</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>Принят в городе получателя</td>
+                                                                    <td>Москва</td>
+                                                                    <td>14.04.2011</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Вручен: Галина Викторовна Нет</td>
+                                                                    <td>Москва</td>
+                                                                    <td>15.04.2011</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
