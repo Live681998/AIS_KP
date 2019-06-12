@@ -19,9 +19,12 @@ namespace PackageTrackingService
             this.driver = driver;
         }
 
+        [FindsBy(How = How.CssSelector, Using = "body > footer > div > div > div > a")]
+        private IWebElement anchor;
+
         public bool PageIsOpened()
         {
-            return true;
+            return anchor.Displayed;
         }
     }
 }

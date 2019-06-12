@@ -31,7 +31,7 @@ namespace PackageTrackingService
 
             FeedbackPage feedback = navigation.ToFeedbackPage();
             //Thread.Sleep(1000);
-            Assert.IsTrue(feedback.PageIsOpened());
+            Assert.IsTrue(feedback.PageIsOpened(), "Страница 'Обратная связь' не открыта");
         }
 
         [Test]
@@ -39,7 +39,7 @@ namespace PackageTrackingService
         {
             TrackingPage tracking = navigation.ToTrackingPage();
             tracking.FillForm("1812536");
-            Assert.IsTrue(tracking.CheckFillForm());
+            Assert.IsTrue(tracking.CheckFillForm(), "Форма не заполнена");
         }
 
         [Test]
@@ -47,17 +47,17 @@ namespace PackageTrackingService
         {
             FeedbackPage feedback = navigation.ToFeedbackPage();
             feedback.FillForm("Ivan", "el@gm62.com", "Gothem", "How are you?");
-
-            Assert.IsTrue(feedback.CheckFillForm());
+            Thread.Sleep(1000);
+            Assert.IsTrue(feedback.CheckFillForm(), "Форма не заполнена");
         }
 
         [Test]
         public void FillFeedbackTestNegative()
         {
             FeedbackPage feedback = navigation.ToFeedbackPage();
-            feedback.FillForm(null, null, null, null);
-
-            Assert.IsTrue(feedback.CheckFillForm());
+            feedback.FillForm("", "", "", "");
+            Thread.Sleep(1000);
+            Assert.IsFalse(feedback.CheckFillForm(), "Форма заполнена (ожидаемый результат - форма не заполнена)");
         }
 
         [Test]
@@ -65,8 +65,8 @@ namespace PackageTrackingService
         {
             FeedbackPage feedback = navigation.ToFeedbackPage();
             feedback.FillForm("Ivan", "el", "Gothem", "How are you?");
-
-            Assert.IsTrue(feedback.CheckFillForm());
+            Thread.Sleep(1000);
+            Assert.IsFalse(feedback.CheckFillForm(), "Форма заполнена, email правильный. Ожидаемый результат - email не проходит проверку");
         }
 
         [OneTimeTearDown]

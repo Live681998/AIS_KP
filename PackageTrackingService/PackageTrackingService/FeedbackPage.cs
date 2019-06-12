@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-
+using System.Threading;
 
 namespace PackageTrackingService
 {
@@ -49,20 +49,39 @@ namespace PackageTrackingService
         public void FillForm(string name, string email, string city, string question)
         {
             nameTextBox.SendKeys(name);
+            Thread.Sleep(1000);
             emailTextBox.SendKeys(email);
+            Thread.Sleep(1000);
             cityTextBox.SendKeys(city);
+            Thread.Sleep(1000);
             questionTextBox.SendKeys(question);
+            Thread.Sleep(1000);
             agreementCheckBox.Click();
+            Thread.Sleep(1000);
             var selectElement = new SelectElement(categoryDropDown);
-            selectElement.SelectByIndex(4);
+            selectElement.SelectByValue("1");
+            Thread.Sleep(1000);
             submitButton.Click();
+            Thread.Sleep(1000);
         }
 
         public bool CheckFillForm()
         {
-            var alert = driver.SwitchTo().Alert();
-            alert.Accept();
-            return true;
+            try
+            {
+                if (driver.SwitchTo().Alert().Text == "Вопрос добавлен")
+                {
+                    
+                    Thread.Sleep(1000);
+                    driver.SwitchTo().Alert().Accept();
+                }
+                return true;
+            }
+            
+            catch(NoAlertPresentException ex)
+            {
+                return false;
+            }
         }
     }
 }

@@ -77,37 +77,39 @@
 
 
 											<div class="question-form">
-											<form method="post" name="comment-form">
-												<p>Ваше имя</p>
-												<input type="text" name="Author" id="CommentAuthor" value="">
-												<br>
-												<p>Адрес эл. почты <em>Не публикуется</em></p>
-												<input type="email" name="Email" id="CommentEmail" value="">
-												<br>
-												<p>Город</p>
-												<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="Location" id="dCommentLocation" value="" autocomplete="off" class="ui-autocomplete-input">
-												<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="hidden" name="City" id="fCommentLocation" class="ui-autocomplete-input" autocomplete="off">
-												<br>
-                                                <p>Категория вопроса</p>
-                                                <select name="TitleCode" id="CommentTitleCode" style="width:300px;">
-                                                    <option value="">&nbsp;</option>
-                                                    <option value="1">Хочу выразить благодарность</option>
-                                                    <option value="5">Сообщаю о некачественном обслуживании</option>
-                                                    <option value="2">Консультация</option>
-                                                    <option value="6">Есть идея</option>
-                                                </select>
-                                                <input type="hidden" value="" name="Title" id="CommentTitle" />
-                                                <br>
-												<p>Вопрос</p>
-												<textarea rows="10" name="Comment" id="CommentComment"></textarea>
-												<input type="hidden" name="Action" value="CreateFeedback">
-												<input type="hidden" name="PageID" value="16">
-												<p class="agreement">
-													<input name="agreement" id="agreement" type="checkbox">
-													<label for="agreement" style="margin-top:-30px;margin-left:20px;" id="agreement-text">Отправляя сообщение, я подтверждаю, что ознакомлен и согласен с <a href="/privacy_policy.html" target="_blank">политикой конфиденциальности</a> данного сайта.</label>
-												</p>
-											</form>
-                                                <a href="#" class="btn act" title="" id="add-feedback" onclick="alert('Вопрос добавлен!')">Добавить вопрос</a>
+												<form method="post" name="comment-form" onsubmit="alert('Вопрос добавлен')">
+													<p>Ваше имя</p>
+													<input type="text" name="Author" id="CommentAuthor" required value="">
+													<br>
+													<p>Адрес эл. почты <em>Не публикуется</em></p>
+													<input type="email" name="Email" id="CommentEmail" value="">
+													<br>
+													<p>Город</p>
+													<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="Location" required id="dCommentLocation" value="" autocomplete="off" class="ui-autocomplete-input">
+													<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="hidden" name="City" id="fCommentLocation" class="ui-autocomplete-input" autocomplete="off">
+													<br>
+													<p>Категория вопроса</p>
+													<select name="TitleCode" required id="CommentTitleCode" style="width:300px;">
+														<option value="">&nbsp;</option>
+														<option value="1">Хочу выразить благодарность</option>
+														<option value="5">Сообщаю о некачественном обслуживании</option>
+														<option value="2">Консультация</option>
+														<option value="6">Есть идея</option>
+													</select>
+													<input type="hidden" value="" name="Title" id="CommentTitle" />
+													<br>
+													<p>Вопрос</p>
+													<textarea rows="10" name="Comment" id="CommentComment" required></textarea>
+													<input type="hidden" name="Action" value="CreateFeedback">
+													<input type="hidden" name="PageID" value="16">
+													<p class="agreement">
+														<input name="agreement" required id="agreement" type="checkbox">
+														<label for="agreement" style="margin-top:-30px;margin-left:20px;" id="agreement-text">Отправляя сообщение, я подтверждаю, что ознакомлен и согласен с <a href="/privacy_policy.html" target="_blank">политикой конфиденциальности</a> данного сайта.</label>
+													</p>
+
+												<!--<a href="#" class="btn act" title="" id="add-feedback" type="submit">Добавить вопрос</a>-->
+													<p><input type="submit" class="btn act" id="add-feedback"></p>
+												</form>
 											</div>
 
 
